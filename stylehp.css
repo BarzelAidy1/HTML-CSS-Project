@@ -1,0 +1,411 @@
+* {
+    margin: 0;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    color: white;
+    background-color: rgb(38, 38, 38);
+}
+h2 {
+    font-size: 8.5rem;
+}
+p {
+    font-weight: bold;
+    margin-top: 1.5rem;
+    color: rgb(254, 247, 235);
+}
+/*  תמונות הרקע בדף הבית */
+#nb {
+    background-image: url(images/IMG_9745.jpg);
+}
+#baby {
+    background-image: url(images/050A3771.jpg);
+    background-position: top;
+}
+#three {
+    background-image: url(images/050A3870.jpg);
+}
+#family {
+    background-image: url(images/050A3624.jpg);
+}
+.bgpicture {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+/*  קישורים בראש דף הבית */
+.links {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    z-index: 1;
+    list-style: none;
+    direction: rtl;
+    
+}
+li:nth-child(1){
+        font-size: 2rem;
+        font-weight:bolder
+}
+.links a {
+    margin:  0 2rem;
+    text-decoration: none;
+    color: white;
+    padding: 0.3rem;
+}
+.links a:hover {
+    border-width: 0 ;
+    border-style: solid;
+    border-color:  #88ab00;
+    border-bottom: 0.5rem solid #88ab00 ;
+    border-radius: 5%;
+    transition: all 150ms;
+}
+.bphone{
+    display: none;
+}
+/*  תפריט נפתח למעבר בתוך דף הבית*/
+.dropbtn{
+    top: 0;
+    margin: 0;
+}
+.dropdown:hover .dropdown-content{
+   display: block;   
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 1;    
+}
+.dropdown a{
+    display: flex;
+}
+/*  איזור הכיתוב מעל תמונות הרקע בדף הבית */
+.homepagetext {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 22vh 60vw 20vh 10vw;
+    text-align: center;
+    background-color: rgb(194, 194, 194, 0.4);
+    border-radius: 4%;
+    padding: 2rem;
+}
+.homepagetext:hover{
+    background-color: rgba(39, 38, 38, 0.4);
+    transition: all 180ms;
+}
+/*  כפתורי ההפניה לגלריה בדף הבית */
+.togallery {
+    padding: 2rem;
+    margin: 3rem;
+    border-radius: 4%;
+    background-color: #88ab00;
+    border: none;
+    font-size: large;    
+    }
+.togallery a{
+    color: white;
+    text-decoration: none;
+}
+.togallery:hover{
+    background-color: rgb(136, 171 ,0 ,0.5);
+    font-weight: bold;  
+    transition: all 180ms;
+}
+
+/*  דף הגלריה */
+/* סידור התמונות בגריד בדף הגלריה*/
+#gallery{ 
+    margin: 0;
+    padding: 5rem;;
+    height: 400vh;
+    display: grid;
+    text-align: center;
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:        1fr 2fr 1fr 1fr 3fr 1fr 2fr;
+    grid-template-areas: "one too tree tree"
+                         "four four tree tree"
+                         "five five six seven"
+                         "five five eit seven"
+                         "nune ten ten eleven "
+                         "therteen forteen fiveteen fiveteen"
+                         "sixteen sixteen fiveteen fiveteen"                      
+                         
+                         ;
+                         gap: 1rem;
+}
+#gallery div{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.p1 {
+    background-image: url(images/IMG_9719.JPG);    
+    background-position: center;    
+    grid-area: one;
+    }
+.p2 {
+    background-image: url(images/6.JPG);    
+    background-position: center;    
+    grid-area: too;
+}
+.p3 {
+    background-image: url(images/IMG_9713.JPG);    
+    background-position: center;    
+    grid-area: tree;
+    
+}
+.p4 {
+    background-image: url(images/IMG_9734.JPG);    
+    grid-area: four;
+}
+.p5 {
+    background-image: url(images/050A3808.jpg);    
+    background-position: center;
+    grid-area: five;
+    }
+.p6 {
+    background-image: url(images/050A4068.jpg);    
+    background-position: top;
+    grid-area: six;
+}
+.p6b {
+    background-image: url(images/050A4068.jpg);    
+    background-position:   bottom;    
+    grid-area: eit;
+    
+}
+.p7 {
+    background-image: url(images/050A4061.jpg);
+        grid-area: seven;
+}
+
+.p8 {
+    background-image: url(images/Barzel21.jpg);    
+    background-position: center;    
+    grid-area: nune;
+    }
+.p9 {
+    background-image: url(images/050A3843.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    grid-area: ten;
+}
+.p10 {
+    background-image: url(images/Barzel11.jpg);    
+    background-position: center;    
+    grid-area: eleven;
+    
+}
+.p11 {
+    background-image: url(images/050A3933_final.jpg);    
+    grid-area: therteen;
+}
+.p12 {
+    background-image: url(images/050A3750.jpg);       
+    grid-area: forteen;
+    }
+.p13 {
+    background-image: url(images/050A3673.jpg);      
+    grid-area: fiveteen;
+}
+.p14 {
+    background-image: url(images/050A3731.jpg);          
+    grid-area: sixteen;    
+}
+.p15 {
+    background-image: url(images/050A4061.jpg);   
+    grid-area: seven;
+}
+/*הוספת עיצוב בעת מעבר על התמונות בגלריה (before)*/
+
+#gallery div{
+    position: relative;
+}
+#gallery div:hover::before{    
+    content: '';  
+    position: absolute; 
+    border: #434343;
+    border-width: 10 rem ;
+    border-style: solid;
+    width: 90%;
+    height: 90%;   
+    top: 50%;   
+    left: 50%;
+    transform: translate(-50% , -50%);
+    
+}
+/* רספונסיביות לדף הגלריה*/
+@media screen and (max-width:1200px) {    
+    #gallery div{       
+        background-repeat: no-repeat;
+    }
+    .p1 {        
+        background-position: right ;     
+        }    
+    .p6b {
+        background-image: url(images/Barzel50.jpg);  
+        background-size: contain; 
+        background-position:center;               
+    }
+        .p11 {        
+        background-position: center;
+    }
+    .p12 {        
+        background-position: center;
+        }
+    
+    .p14 {          
+        background-position: center;  
+    }    
+    }
+    @media screen and (max-width:600px) {
+        #gallery{ 
+            margin: 0;
+            padding: 5rem;;
+            height: 900vh;
+            display: grid;
+            text-align: center;
+        
+                grid-template-columns: 1fr ;
+            grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 3fr 2fr 3fr 1fr 3fr 2fr 1fr 3fr 1fr  ;
+            grid-template-areas: "one"
+            "too"  
+            " tree"
+                                 "four"                 
+                                 
+                                 "five"
+                                 " six"
+                                 " seven"
+                                 "  eit "
+                                 "nune "
+                                 " ten"
+                                  "eleven "
+                                 "therteen"
+                                 " forteen"
+                                 " fiveteen "
+                                 "sixteen"  
+                                                      
+                                 
+                                 ;
+                                 gap: 1rem;
+        }
+        
+        .p13 {
+            background-position: center;
+        }
+        
+    /* רספונסיביות לתפריט: במובייל הופך לכפתור*/
+    .links {
+        display: none;        
+    }
+    .bphone{
+        display: block;
+        position: fixed;
+        border-radius: 50%;
+        border-width: 0.2rem;
+        border-color: #5e7600;
+        background-color: #88ab00;
+        padding: 1.8rem;        
+        top: 3vh;
+        left: 3vh;
+        color: azure;
+        font-size:x-large;
+        z-index: 1;
+           
+    }
+    .bphone:hover{
+        rotate: 10deg;
+        transition: all 200ms;
+    }  
+       
+
+    }
+
+/*טופס יצירת קשר  */
+#formbackground{
+    background-image: url(images/050A3664.jpg);
+    width: 100vw;
+    height: 100%;
+    background-size:cover;
+    opacity:0.5;    
+}
+#form{
+    text-align: center;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+#form h3{
+margin: 4rem;
+font-size: 3rem;
+color: #5f1b23;
+}
+#form input, textarea {
+    padding: 0.5rem 7rem;
+}
+#sent{    
+    background-image: url(images/Barzel31.jpg);
+    width: 100vw;
+    height: 200vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    opacity:0.5;
+    
+}
+#textSent{
+    text-align: center;
+    padding: 15rem 5rem;
+    position: sticky;
+    top: -200px;
+}
+
+@keyframes sendColorChange{
+    from{color: white;}
+    to{color:#aa011d;}
+}
+.send{
+animation-name: sendColorChange;
+animation-duration: 800ms;
+animation-iteration-count:infinite;
+animation-direction: alternate;
+}
+ 
+/* אנימציה להזמנה התקבלה*/
+@keyframes changeColor{
+    from{color: white;}
+    to{color:#88ab00;}
+}
+.textanimation{
+animation-name: changeColor;
+animation-duration: 600ms;
+animation-iteration-count:infinite;
+animation-direction: alternate;
+}
+/* אנימציה לכיתוב בדף הבית*/
+@keyframes growUp{
+    from {
+        opacity: 0; 
+        transform: scale (0);
+    }
+    to{opacity:1;transform: scale (1);}
+}
+
+.homepagetext{
+    animation-name: growUp;
+animation-duration: 600ms;
+animation-delay: 2s;
+
+animation-direction: alternate;
+
+}
+
+

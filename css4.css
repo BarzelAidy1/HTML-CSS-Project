@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    text-align: center;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 70px 1fr 20px;
+    grid-template-areas: "header"
+        "nav"
+        "main"
+        "footer";
+}
+header {
+    background-color: rgb(188 89 76);
+    grid-area: header;
+    color: #f4dec6;
+}
+main {
+    background-color: rgb(235 207 191);
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 4rem;
+    padding: 1rem;
+    overflow-y: scroll;
+}
+nav {
+    background-color: rgb(227 126 104);
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    direction: rtl;
+}
+footer {
+    background-color:rgb(188 89 76);
+    color: #62221b;
+    grid-area: footer;
+}
+main .card {
+    padding: 1.5rem;
+    background-color: rgb(244 222 198);
+    border-radius: 1rem;
+    text-align: center;
+    color: #62221b;
+}
+main .card .img {
+    width: 100%;
+    
+    border-radius: 0.5rem;
+}
+nav a {
+    color: #66231c;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #ffffff;
+}
+main button {
+    padding: 0.5rem 2rem;
+    background-color: #66231c;
+    font-size: 1.2rem;
+    color: white;
+}
+button a {
+color: white;
+text-decoration: none;
+}
+button:hover {
+    background-color: #f4dec6;
+        }
+@media screen and (max-width:1200px) {
+    body {
+        grid-template-columns: 1fr 200px;
+        grid-template-rows: 100px 1fr 50px;
+        grid-template-areas: "header header"
+            "main nav"
+            "footer footer";
+    }
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+        padding: 1rem;
+        overflow-y: scroll;
+    }
+    nav {
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+    }
+    @media screen and (max-width:600px) {
+        body {
+
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px 70px 1fr;
+            grid-template-areas: "header"
+                "nav"
+                "main"
+        }
+        main {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 4rem;
+            padding: 1rem;
+            overflow-y: scroll;
+        }
+        nav {
+            justify-content: space-around;
+            flex-direction: row;
+            align-items: center;
+        }
+        footer {
+            display: none;
+        }
+    }
+
+    /*עיצובים לדף המוצרים    

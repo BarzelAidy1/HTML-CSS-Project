@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יצירת קשר</title>
+    <link rel="stylesheet" href="stylehp.css">
+</head>
+<body>
+    <nav>
+        <ul class="links">
+            <li><a href="HomePage.html">בית</a></li>
+            <li><a href="gal.html">גלריות</a></li>
+            <li><a href="html.html">חנות</a></li>
+            <li><a href="form.html">צור קשר</a></li>
+        </ul>
+    </nav>
+    <button class="bphone">></button>
+    <div id="formbackground">
+        <form id="form" method="get" action="success.html">
+            <h3>אני רוצה להזמין </h3>
+            שם פרטי <input type="text" name="firstname"/><br/>
+            שם משפחה<input type="text" name="lastname"/><br/>
+            טלפון <input type="tel" name="phone"/><br/>
+            כתובת מייל<input type="email" name="email"/><br/>
+            תאריך מבוקש לצילום <input type="date" name="invitsionDate"/><br/>
+            <label>החבילה המבוקשת</label><br/>
+            צילומי ניו בורן<input type="radio" name="invit" value="newBorn"/><br/>
+            צילום תינוקות<input type="radio" name="invit" value="baby"/><br/>
+            צילומי חלאקה<input type="radio" name="invit" value="threeYearsOld"/><br/>
+            צילומי משפחה<input type="radio" name="invit" value="family"/><br/>
+
+            <textarea name="massage" placeholder="אם יש לך בקשה מיוחדת הכניסי כאן" ></textarea><br/>
+            <input class="send" type="submit"/>
+            
+        </form>
+
+    </div>
+    
+</body>
+</html>
